@@ -1,17 +1,24 @@
-# big_data
+# How to execute the scripts
 
-In questa repository sono presenti due script Python: pyspark_script e time_test_script.
-In pyspark_script sono presenti:
-- Il preprocessing necessario per ottenere l'RDD voluto.
-- Le funzioni che permettono le query sul suddetto RDD.
-Per testare le funzioni:
-- Inserire i file (computer_science_1.json ed entities.csv) sul sistema che si sta utilizzando (Colab, AWS EC2 ecc.)
-- Aprire pyspark
-- Eseguire tutta la prima parte di preprocessing (righe 1-17)
-- Definire le funzioni fornite (righe 19-78)
-- Chiamare la funzione desiderata e passare i parametri in input richiesti.
+## Test per ottenere il tempo medio di esecuzione
 
-Per eseguire lo script di test time_test_script.py è necessario:
-- Inserire i file (computer_science_1.json, entities.csv e lo script time_test_script.py) sul sistema che si sta utilizzando (Colab, AWS EC2 ecc.)
-- Avviare Spark
-- Lanciare il comando './spark/bin/spark-submit --master local path_to_script'
+Passi da seguire per eseguire lo script di test (tempo medio per trovare un entità):
+
+-   Inserire i file (**_computer_science_1.json_**, **_entities.csv_** e lo script **_time_test_script.py_**) sul sistema che si sta utilizzando (**_Colab_**, **_AWS EC2_** ecc.)
+-   Avviare Spark
+-   Lanciare il comando `./spark/bin/spark-submit --master local `**_path_to_script_**
+
+## Esecuzione delle query
+
+Passi da eseguire per ottenere l'RDD ideato ed eseguire le query richieste aprire il file **_pyspark_script.py_** in cui è presente:
+
+-   Il preprocessing necessario per ottenere l'RDD.
+-   Le funzioni che permettono le query sul suddetto RDD.
+
+Per testare le funzioni (eseguire le query):
+
+-   Inserire i file (**_computer_science_1.json_** ed **_entities.csv_**) sul sistema che si sta utilizzando (**_Colab_**, **_AWS EC2_** ecc.)
+-   Aprire pyspark lanciando il comando `pyspark`
+-   Eseguire tutta la prima parte di preprocessing **_righe 1-17_**
+-   Definire le funzioni fornite **_righe 19-78_**
+-   Chiamare la funzione desiderata e passare i parametri in input richiesti.
