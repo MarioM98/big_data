@@ -61,7 +61,7 @@ def id_papers_with_threshold(rdd, entity, threshold):
     return rdd.filter(lambda x: x[0] == entity).flatMap(lambda x: x[1]).filter(lambda x: x[1] >= threshold).map(lambda x: x[0])
 
 #------------------------------------------------------------------------------------------------------------------------------------------#
-# Returns the total number of citations in a given year of all papers which contain the given entity
+# Returns the total number of citations of papers published in a given year of all papers which contain the given entity
 # No need to be collected
 def year_citation_by_entity(rdd, entity, year):
     return papers_by_entity(rdd, entity).filter(lambda x : x[2][:4] == year).map(lambda x : x[1]).reduce(lambda x,y : x+y)
